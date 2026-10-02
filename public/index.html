@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flame Score</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">🔥</span>
+        <span class="logo-text">FlameScore</span>
+      </div>
+      <span class="badge">MapleStory</span>
+    </header>
+
+    <!-- Bento Grid -->
+    <main class="bento-grid">
+
+      <!-- Upload Card -->
+      <div class="card card--upload" id="dropzone">
+        <input type="file" id="fileInput" accept="image/*" hidden />
+        <div class="upload-inner" id="dropContent">
+          <div class="upload-icon">↑</div>
+          <p class="upload-title">Drop item screenshot</p>
+          <p class="upload-hint">or click to browse · paste with Ctrl+V</p>
+        </div>
+        <img id="preview" src="" alt="Preview" hidden />
+      </div>
+
+      <!-- Action Card -->
+      <div class="card card--action">
+        <div class="card-label">Ready to calculate</div>
+        <p class="card-desc">Upload a screenshot to detect teal flame values and compute your score.</p>
+        <button class="btn" id="calcBtn" disabled>Calculate Score</button>
+        <button class="btn-ghost" id="resetBtn" hidden>Reset</button>
+      </div>
+
+      <!-- Result Card -->
+      <div class="card card--result" id="resultBox" hidden>
+        <div class="result-top">
+          <span class="card-label">Result</span>
+        </div>
+        <pre id="resultText" class="result-pre"></pre>
+      </div>
+
+      <!-- Loader Card -->
+      <div class="card card--loader" id="loader" hidden>
+        <span class="loader-flame">🔥</span>
+        <span class="loader-text" id="loaderText">Calculating...</span>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

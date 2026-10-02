@@ -1,0 +1,20 @@
+# Local environment and credentials
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+credentials*.json
+*service-account*.json
+
+# Dependencies and generated files
+node_modules/
+coverage/
+dist/
+logs/
+*.log
+.DS_Store
+Thumbs.db
